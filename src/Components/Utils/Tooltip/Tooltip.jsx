@@ -9,7 +9,7 @@ const Tooltip = ({ title }) => {
             </div>
 
             <button className='p-2 rounded-full hover:bg-gray-200'>
-                <CiSettings className='w-10 h-10 text-gray-700' />
+                <CiSettings className='w-10 h-10 text-white bg-black rounded-full hover:text-gray-400' />
             </button>
         </div>
     )
