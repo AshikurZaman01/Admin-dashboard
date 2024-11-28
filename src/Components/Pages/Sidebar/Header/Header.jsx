@@ -5,10 +5,10 @@ const Header = () => {
                 className="hidden md:block text-lg font-bold transform transition-transform duration-300 ease-in-out 
                 hover:scale-105 "
             >
-                Admin Dashboard
+                ChocoCart
             </h1>
 
-            <h1 className="text-xs font-bold md:hidden">Admin</h1>
+            <h1 className="text-xs font-bold md:hidden">Choco</h1>
         </div>
     );
 };
