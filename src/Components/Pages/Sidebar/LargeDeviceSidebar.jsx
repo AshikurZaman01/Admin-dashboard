@@ -1,71 +1,75 @@
-import { FaChartArea, FaChartLine, FaChartPie, FaHome, FaShoppingBasket, FaUsers } from 'react-icons/fa'
+import { FaChartArea, FaChartLine, FaChartPie, FaHome, FaShoppingBasket, FaUsers } from 'react-icons/fa';
 import { FaChartGantt, FaUsersBetweenLines } from "react-icons/fa6";
 import { GiBallPyramid } from "react-icons/gi";
 import { IoMdColorPalette } from "react-icons/io";
 import { SlCalender } from "react-icons/sl";
 import { MdViewKanban } from "react-icons/md";
 import { CgColorPicker } from "react-icons/cg";
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import { CiEdit } from 'react-icons/ci';
 
 const LargeDeviceSidebar = ({ isActive }) => {
     return (
         <div className="hidden sm:block overflow-y-auto flex-grow scrollbar-hidden">
-            <p>Dashboard</p>
-            <Link to="/" className={`block p-4 ${isActive("/")}`}>
+            <p className="text-xl font-semibold text-white mt-4">Dashboard</p>
+            <div className='divider h-1 p-1 m-1'></div>
+            <NavLink to="/" className={`sidebar-item`} activeClassName="active">
                 <FaHome size={24} /> Ecommerce
-            </Link>
+            </NavLink>
 
-            <p>Pages</p>
-            <Link to="/orders" className={`block p-4 ${isActive("/orders")}`}>
+            <p className="text-xl font-semibold text-white mt-4">Pages</p>
+            <div className='divider h-1 p-1 m-1'></div>
+            <NavLink to="/orders" className={`sidebar-item`} activeClassName="active">
                 <FaShoppingBasket size={24} /> Orders
-            </Link>
-            <Link to="/employees" className={`block p-4 ${isActive("/employees")}`}>
+            </NavLink>
+            <NavLink to="/employees" className={`sidebar-item`} activeClassName="active">
                 <FaUsers size={24} /> Employees
-            </Link>
-            <Link to="/customers" className={`block p-4 ${isActive("/customers")}`}>
+            </NavLink>
+            <NavLink to="/customers" className={`sidebar-item`} activeClassName="active">
                 <FaUsersBetweenLines size={24} /> Customers
-            </Link>
+            </NavLink>
 
-            <p>Apps</p>
-            <Link to="/calender" className={`block p-4 ${isActive("/calender")}`}>
+            <p className="text-xl font-semibold text-white mt-4">Apps</p>
+            <div className='divider h-1 p-1 m-1'></div>
+            <NavLink to="/calender" className={`sidebar-item`} activeClassName="active">
                 <SlCalender size={24} /> Calendar
-            </Link>
-            <Link to="/kanban" className={`block p-4 ${isActive("/kanban")}`}>
+            </NavLink>
+            <NavLink to="/kanban" className={`sidebar-item`} activeClassName="active">
                 <MdViewKanban size={24} /> Kanban
-            </Link>
-            <Link to="/editor" className={`block p-4 ${isActive("/editor")}`}>
+            </NavLink>
+            <NavLink to="/editor" className={`sidebar-item`} activeClassName="active">
                 <CiEdit size={24} /> Editor
-            </Link>
-            <Link to="/colorPicker" className={`block p-4 ${isActive("/colorPicker")}`}>
+            </NavLink>
+            <NavLink to="/colorPicker" className={`sidebar-item`} activeClassName="active">
                 <CgColorPicker size={24} /> Color Picker
-            </Link>
+            </NavLink>
 
-            <p>Chart</p>
-            <Link to="/line" className={`block p-4 ${isActive("/line")}`}>
+            <p className="text-xl font-semibold text-white mt-4">Chart</p>
+            <div className='divider h-1 p-1 m-1'></div>
+            <NavLink to="/line" className={`sidebar-item`} activeClassName="active">
                 <FaChartLine size={24} /> Line
-            </Link>
-            <Link to="/area" className={`block p-4 ${isActive("/area")}`}>
+            </NavLink>
+            <NavLink to="/area" className={`sidebar-item`} activeClassName="active">
                 <FaChartArea size={24} /> Area
-            </Link>
-            <Link to="/pie" className={`block p-4 ${isActive("/pie")}`}>
+            </NavLink>
+            <NavLink to="/pie" className={`sidebar-item`} activeClassName="active">
                 <FaChartPie size={24} /> Pie
-            </Link>
-            <Link to="/financial" className={`block p-4 ${isActive("/financial")}`}>
+            </NavLink>
+            <NavLink to="/financial" className={`sidebar-item`} activeClassName="active">
                 <FaChartGantt size={24} /> Financial
-            </Link>
+            </NavLink>
 
-            <Link to="/colorMapping" className={`block p-4 ${isActive("/colorMapping")}`}>
+            <NavLink to="/colorMapping" className={`sidebar-item`} activeClassName="active">
                 <IoMdColorPalette size={24} /> ColorMapping
-            </Link>
+            </NavLink>
 
-            <Link to="/pyramid" className={`block p-4 ${isActive("/pyramid")}`}>
+            <NavLink to="/pyramid" className={`sidebar-item`} activeClassName="active">
                 <GiBallPyramid size={24} /> Pyramid
-            </Link>
+            </NavLink>
 
             <p className='mb-20'></p>
         </div>
-    )
+    );
 }
 
-export default LargeDeviceSidebar
+export default LargeDeviceSidebar;

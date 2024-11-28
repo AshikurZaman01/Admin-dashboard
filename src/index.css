@@ -63,5 +63,69 @@ body{
 
 /* Firefox */
 .scrollbar-hidden {
-  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  scrollbar-width: none; 
 }
+
+
+/* -------------------------- */
+/* Style for sidebar items */
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  border-radius: 8px;
+  color: #fff;  
+  background-color: #3b82f6;  
+  margin-bottom: 8px;
+}
+
+.sidebar-item:hover {
+  transform: scale(1.05) translateY(-3px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  background-color: #2563eb; 
+  color: #fff; 
+}
+
+/* Add colorful hover effects by adding background gradient on hover */
+.sidebar-item:nth-child(even):hover {
+  background: linear-gradient(45deg, #8b5cf6, #9333ea);
+}
+
+.sidebar-item:nth-child(odd):hover {
+  background: linear-gradient(45deg, #fb923c, #f97316);
+}
+
+/* Active state styling */
+.sidebar-item.active {
+  background-color: #10b981; 
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Icon and text styling */
+.sidebar-item svg {
+  margin-right: 12px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-item:hover svg {
+  transform: scale(1.2); /* Scale icons on hover */
+  color: #fff; /* Change icon color to white on hover */
+}
+
+.sidebar-item p {
+  font-size: 1.25rem;
+  color: white;
+  margin-bottom: 8px;
+}
+
+/* Add gradient background for the sidebar itself */
+.sidebar {
+  background: linear-gradient(to bottom, #1e40af, #2563eb);
+  height: 100vh;
+  padding: 10px;
+}
+
+/* -------------------------- */
+
