@@ -11,7 +11,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => {
                 {dotColor && (
                     <span
                         style={{ background: dotColor }}
-                        className="absolute inline-flex rounded-full h-2 w-2 right-0 top-0 transform translate-x-1 translate-y-1"
+                        className="absolute inline-flex rounded-full h-2 w-2 right-4 top-1 transform translate-x-1 translate-y-1"
                     />
                 )}
             </button>
