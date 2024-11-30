@@ -13,57 +13,99 @@ const LargeDeviceSidebar = ({ isActive }) => {
         <div className="hidden sm:block overflow-y-auto flex-grow scrollbar-hidden">
             <p className="text-xl font-semibold text-white mt-4">Dashboard</p>
             <div className='divider h-1 p-1 m-1'></div>
-            <NavLink to="/" className={`sidebar-item`} activeClassName="active">
+            <NavLink
+                to="/"
+                className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}
+            >
                 <FaHome size={24} /> Ecommerce
             </NavLink>
 
             <p className="text-xl font-semibold text-white mt-4">Pages</p>
             <div className='divider h-1 p-1 m-1'></div>
-            <NavLink to="/orders" className={`sidebar-item`} activeClassName="active">
+            <NavLink
+                to="/orders"
+                className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}
+            >
                 <FaShoppingBasket size={24} /> Orders
             </NavLink>
-            <NavLink to="/employees" className={`sidebar-item`} activeClassName="active">
+            <NavLink
+                to="/employees"
+                className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}
+            >
                 <FaUsers size={24} /> Employees
             </NavLink>
-            <NavLink to="/customers" className={`sidebar-item`} activeClassName="active">
+            <NavLink
+                to="/customers"
+                className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}
+            >
                 <FaUsersBetweenLines size={24} /> Customers
             </NavLink>
 
             <p className="text-xl font-semibold text-white mt-4">Apps</p>
             <div className='divider h-1 p-1 m-1'></div>
-            <NavLink to="/calender" className={`sidebar-item`} activeClassName="active">
+            <NavLink
+                to="/calender"
+                className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}
+            >
                 <SlCalender size={24} /> Calendar
             </NavLink>
-            <NavLink to="/kanban" className={`sidebar-item`} activeClassName="active">
+            <NavLink
+                to="/kanban"
+                className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}
+            >
                 <MdViewKanban size={24} /> Kanban
             </NavLink>
-            <NavLink to="/editor" className={`sidebar-item`} activeClassName="active">
+            <NavLink
+                to="/editor"
+                className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}
+            >
                 <CiEdit size={24} /> Editor
             </NavLink>
-            <NavLink to="/colorPicker" className={`sidebar-item`} activeClassName="active">
+            <NavLink
+                to="/colorPicker"
+                className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}
+            >
                 <CgColorPicker size={24} /> Color Picker
             </NavLink>
 
             <p className="text-xl font-semibold text-white mt-4">Chart</p>
             <div className='divider h-1 p-1 m-1'></div>
-            <NavLink to="/line" className={`sidebar-item`} activeClassName="active">
+            <NavLink
+                to="/line"
+                className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}
+            >
                 <FaChartLine size={24} /> Line
             </NavLink>
-            <NavLink to="/area" className={`sidebar-item`} activeClassName="active">
+            <NavLink
+                to="/area"
+                className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}
+            >
                 <FaChartArea size={24} /> Area
             </NavLink>
-            <NavLink to="/pie" className={`sidebar-item`} activeClassName="active">
+            <NavLink
+                to="/pie"
+                className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}
+            >
                 <FaChartPie size={24} /> Pie
             </NavLink>
-            <NavLink to="/financial" className={`sidebar-item`} activeClassName="active">
+            <NavLink
+                to="/financial"
+                className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}
+            >
                 <FaChartGantt size={24} /> Financial
             </NavLink>
 
-            <NavLink to="/colorMapping" className={`sidebar-item`} activeClassName="active">
+            <NavLink
+                to="/colorMapping"
+                className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}
+            >
                 <IoMdColorPalette size={24} /> ColorMapping
             </NavLink>
 
-            <NavLink to="/pyramid" className={`sidebar-item`} activeClassName="active">
+            <NavLink
+                to="/pyramid"
+                className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}
+            >
                 <GiBallPyramid size={24} /> Pyramid
             </NavLink>
 

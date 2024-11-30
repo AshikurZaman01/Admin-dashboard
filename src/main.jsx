@@ -20,6 +20,7 @@ import Pie from './Components/Pages/Pie/pie';
 import Financial from './Components/Pages/Financial/Financial';
 import ColorMapping from './Components/Pages/ColorMapping/ColorMapping';
 import Pyramid from './Components/Pages/Pyramid/Pyramid';
+import { ContextProvider } from './Components/ContextApi/ContextProvider';
 
 const router = createBrowserRouter([
   {
@@ -93,6 +94,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <ContextProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </ContextProvider>
   </React.StrictMode >
 )

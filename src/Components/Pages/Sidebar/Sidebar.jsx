@@ -2,8 +2,13 @@ import { Link, useLocation } from 'react-router-dom';
 import Header from './Header/Header';
 import SmallDeviceSidebar from './SmallDeviceSidebar';
 import LargeDeviceSidebar from './LargeDeviceSidebar';
+import { UseGlobalState } from '../../ContextApi/ContextProvider';
 
-const Sidebar = ({ activeMenu }) => {
+const Sidebar = () => {
+
+    const { activeMenu, setActiveMenu } = UseGlobalState();
+
+
     const location = useLocation();
 
     const isActive = (path) => location.pathname === path ? "bg-blue-500 text-white" : "";
@@ -17,6 +22,7 @@ const Sidebar = ({ activeMenu }) => {
 
             {activeMenu && (
                 <div className="flex flex-col h-full">
+
                     {/* On small screens, show only icons */}
                     <SmallDeviceSidebar isActive={isActive}></SmallDeviceSidebar>
                     {/* On small screens, show only icons */}
@@ -24,6 +30,7 @@ const Sidebar = ({ activeMenu }) => {
                     {/* On larger screens, show full text and icons */}
                     <LargeDeviceSidebar isActive={isActive}></LargeDeviceSidebar>
                     {/* On larger screens, show full text and icons */}
+
                 </div>
             )}
         </div>
