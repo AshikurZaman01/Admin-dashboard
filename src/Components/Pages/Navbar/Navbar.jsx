@@ -7,8 +7,9 @@ import UserProfile from './UserProfile/UserProfile';
 
 const Navbar = () => {
 
+
     return (
-        <div className=" w-full bg-white dark:bg-mainDarkBg shadow-md z-50">
+        <div className=" w-full bg-slate-800 dark:bg-mainDarkBg shadow-md z-50">
             <div className="flex items-center justify-between  mx-auto py-4 rounded-full">
 
                 {/* Search Bar */}

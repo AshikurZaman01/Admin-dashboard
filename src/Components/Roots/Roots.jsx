@@ -8,7 +8,7 @@ const Roots = () => {
     const [activeMenu, setActiveMenu] = useState(true);
 
     return (
-        <div className="flex relative dark:bg-mainDarkBg min-h-screen bg-blue-300">
+        <div className="flex relative dark:bg-mainDarkBg min-h-screen ">
 
             {/* Tooltip */}
             <div className="fixed right-4 bottom-4 z-[1000]">
@@ -30,7 +30,7 @@ const Roots = () => {
                 {/* Navbar */}
 
                 {/* Routes Content */}
-                <div className="pl-24 md:pl-0 md:mt-0 mt-0 bg-blue-600">
+                <div className="pl-24 md:pl-0 md:mt-0 mt-0 ">
                     <Outlet />
                 </div>
                 {/* Routes Content */}

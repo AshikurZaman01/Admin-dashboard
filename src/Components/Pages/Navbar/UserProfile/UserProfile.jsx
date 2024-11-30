@@ -19,11 +19,11 @@ const UserProfile = () => {
             </div>
 
             <div className="flex justify-center items-center gap-2 cursor-pointer text-gray-400">
-                <h3 className="text-sm font-semibold text-gray-900 transform transition-all duration-300 hover:scale-105">Ashik</h3>
+                <h3 className="text-sm font-semibold text-white transform transition-all duration-300 hover:scale-105 ">Ashik</h3>
 
                 {/* user profile details */}
                 <div className="relative">
-                    <span className="cursor-pointer text-gray-900 text-lg" onClick={toggleDropdown}>
+                    <span className="cursor-pointer text-blue-600 text-lg" onClick={toggleDropdown}>
                         {isDropdownOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
                     </span>
 
