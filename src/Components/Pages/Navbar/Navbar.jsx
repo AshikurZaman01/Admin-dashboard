@@ -1,15 +1,11 @@
 import NavButton from './NavButton/NavButton';
-import { FiShoppingCart, FiHome, FiUser, FiX } from 'react-icons/fi';
+import { FiShoppingCart } from 'react-icons/fi';
 import SearchBar from './SearchBar/SearchBar';
 import { CiChat1 } from 'react-icons/ci';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import UserProfile from './UserProfile/UserProfile';
 
 const Navbar = () => {
-
-
-
-
 
     return (
         <div className=" w-full bg-white dark:bg-mainDarkBg shadow-md z-50">

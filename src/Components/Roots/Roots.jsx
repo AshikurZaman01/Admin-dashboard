@@ -30,7 +30,7 @@ const Roots = () => {
                 {/* Navbar */}
 
                 {/* Routes Content */}
-                <div className="pl-24 md:pl-0 md:mt-0 mt-16 bg-blue-600">
+                <div className="pl-24 md:pl-0 md:mt-0 mt-0 bg-blue-600">
                     <Outlet />
                 </div>
                 {/* Routes Content */}
