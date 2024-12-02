@@ -4,6 +4,18 @@ import GridView from "./GridView/GridView";
 
 const Orders = () => {
 
+    const images = [
+        { id: 1, image: "https://github.com/adrianhajdin/project_syncfusion_dashboard/blob/main/src/data/product1.jpg?raw=true" },
+        { id: 2, image: "https://github.com/adrianhajdin/project_syncfusion_dashboard/blob/main/src/data/product2.jpg?raw=true" },
+        { id: 3, image: "https://github.com/adrianhajdin/project_syncfusion_dashboard/blob/main/src/data/product3.jpg?raw=true" },
+        { id: 4, image: "https://github.com/adrianhajdin/project_syncfusion_dashboard/blob/main/src/data/product4.jpg?raw=true" },
+        { id: 5, image: "https://github.com/adrianhajdin/project_syncfusion_dashboard/blob/main/src/data/product5.jpg?raw=true" },
+        { id: 6, image: "https://github.com/adrianhajdin/project_syncfusion_dashboard/blob/main/src/data/product6.jpg?raw=true" },
+        { id: 7, image: "https://github.com/adrianhajdin/project_syncfusion_dashboard/blob/main/src/data/product7.jpg?raw=true" },
+        { id: 8, image: "https://github.com/adrianhajdin/project_syncfusion_dashboard/blob/main/src/data/product8.jpg?raw=true" },
+        { id: 9, image: "https://github.com/adrianhajdin/project_syncfusion_dashboard/blob/main/src/data/product9.jpg?raw=true" },
+    ]
+
     const ordersData = [
         {
             "OrderID": 10248,
@@ -137,13 +149,15 @@ const Orders = () => {
         }
     ]
 
+
+
     return (
         <div className="m-2 md:m-10 p-2 md:p-5 md:py-10 bg-gradient-to-r from-blue-100 to-indigo-200 rounded-3xl">
             {/* Page Header */}
             <PageHeaders category={"Orders"} title={"All Orders"} />
 
             {/* Grid View */}
-            <GridView dataSource={ordersData} />
+            <GridView dataSource={ordersData} images={images} />
         </div>
     )
 }

@@ -1,6 +1,12 @@
 import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Page, Sort, Edit, Toolbar, Filter, Aggregate, Resize, CommandColumn } from '@syncfusion/ej2-react-grids';
 
-const GridView = ({ dataSource }) => {
+const GridView = ({ dataSource, images }) => {
+
+    // Function to get the image URL based on the ProductImage field value
+    const getImageUrl = (productImage) => {
+        const image = images.find(img => img.id === parseInt(productImage.replace('product', '')));
+        return image ? image.image : ''; // Return the URL if found, otherwise empty string
+    };
 
     const ordersGrid = [
         {
@@ -65,7 +71,16 @@ const GridView = ({ dataSource }) => {
         >
             <ColumnsDirective>
                 {ordersGrid.map((item, index) => (
-                    <ColumnDirective key={index} {...item} />
+                    <ColumnDirective
+                        key={index}
+                        {...item}
+                        template={(props) => {
+                            if (item.headerText === "Image") {
+                                return <img src={getImageUrl(props.ProductImage)} alt="Product" style={{ width: '100%', height: 'auto' }} />;
+                            }
+                            return props[item.field];
+                        }}
+                    />
                 ))}
             </ColumnsDirective>
             <Inject services={[Page, Sort, Edit, Toolbar, Filter, Aggregate, Resize, CommandColumn]} />
