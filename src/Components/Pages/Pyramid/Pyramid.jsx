@@ -16,7 +16,7 @@ const Pyramid = () => {
     return (
         <div className="m-2 md:m-10 p-2 md:p-5 md:py-10 bg-gradient-to-r from-blue-100 to-indigo-200 rounded-3xl">
             {/* Page Header */}
-            <PageHeaders category={"Chart"} title={"Color Mapping"} />
+            <PageHeaders category={"Chart"} title={"Pyramid Chart"} />
 
             <div className="w-full">
                 <AccumulationChartComponent
