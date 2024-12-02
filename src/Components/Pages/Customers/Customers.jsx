@@ -1,4 +1,5 @@
 import PageHeaders from "../../Utils/PageHeaders/PageHeaders"
+import GridViewCus from "./GridViewCus"
 
 const Customers = () => {
 
@@ -248,12 +249,11 @@ const Customers = () => {
 
     return (
         <div className="m-2 md:m-10 p-2 md:p-5 md:py-10 bg-gradient-to-r from-blue-100 to-indigo-200 rounded-3xl">
-           
             {/* Page Header */}
             <PageHeaders category={"Page"} title={"All Customers"} />
 
-            Customers
-
+            {/* Grid View */}
+            <GridViewCus dataSource={customerData} />
         </div>
     )
 }
