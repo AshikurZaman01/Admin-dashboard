@@ -5,7 +5,6 @@ import RevenueUpdates from './RevenueUpdates/RevenueUpdates';
 
 const Ecommerce = () => {
 
-
     return (
         <div className='mt-1'>
 
