@@ -1,9 +1,7 @@
-import React from 'react';
 import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Page, Sort, Edit, Toolbar, Filter, Resize, CommandColumn, ExcelExport, PdfExport, Search } from '@syncfusion/ej2-react-grids';
 
 const EmployeeGrid = ({ dataSource }) => {
 
-    // Define grid columns
     const employeGrid = [
         {
             "headerText": "Employee",
@@ -37,7 +35,7 @@ const EmployeeGrid = ({ dataSource }) => {
             "field": "HireDate",
             "headerText": "Hire Date",
             "width": "135",
-            "format": "yyyy-MM-dd", // Adjusted date format
+            "format": "yyyy-MM-dd",
             "textAlign": "Center"
         },
         {
