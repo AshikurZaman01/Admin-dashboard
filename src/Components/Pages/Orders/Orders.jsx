@@ -1,5 +1,4 @@
 import PageHeaders from "../../Utils/PageHeaders/PageHeaders"
-import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Page, Sort, Edit, Toolbar, Filter, Aggregate, Resize, CommandColumn } from '@syncfusion/ej2-react-grids';
 import GridView from "./GridView/GridView";
 
 
@@ -138,37 +137,13 @@ const Orders = () => {
         }
     ]
 
-    const menuItems = [
-        "AutoFit",
-        "AutoFitAll",
-        "SortAscending",
-        "SortDescending",
-        "Copy",
-        "Edit",
-        "Delete",
-        "Save",
-        "Cancel",
-        "PdfExport",
-        "ExcelExport",
-        "CsvExport",
-        "FirstPage",
-        "PrevPage",
-        "LastPage",
-        "NextPage"
-    ]
-
-
-
-
     return (
-        <div className="m-2 md:m-10 p-2 md:p-10 bg-white  rounded-3xl">
+        <div className="m-2 md:m-10 p-2 md:p-5 md:py-10 bg-gradient-to-r from-blue-100 to-indigo-200 rounded-3xl">
+            {/* Page Header */}
+            <PageHeaders category={"Orders"} title={"All Orders"} />
 
-            <PageHeaders category={"Page"} title={"Orders"} />
-
-            <div>
-                <GridView />
-            </div>
-
+            {/* Grid View */}
+            <GridView dataSource={ordersData} />
         </div>
     )
 }

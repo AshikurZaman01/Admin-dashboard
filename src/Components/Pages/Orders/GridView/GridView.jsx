@@ -1,6 +1,6 @@
 import { GridComponent, ColumnsDirective, ColumnDirective, Inject, Page, Sort, Edit, Toolbar, Filter, Aggregate, Resize, CommandColumn } from '@syncfusion/ej2-react-grids';
 
-const GridView = () => {
+const GridView = ({ dataSource }) => {
 
     const ordersGrid = [
         {
@@ -52,12 +52,23 @@ const GridView = () => {
     ];
 
     return (
-        <GridComponent>
+        <GridComponent
+            id='gridComp'
+            dataSource={dataSource}
+            allowPaging={true}
+            allowSorting={true}
+            pageSettings={{ pageSize: 5 }}
+            rowHeight={60}
+            toolbar={["Search", "PdfExport", "ExcelExport"]}
+            filterSettings={{ type: 'Menu' }}
+            style={{ boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}
+        >
             <ColumnsDirective>
                 {ordersGrid.map((item, index) => (
                     <ColumnDirective key={index} {...item} />
                 ))}
             </ColumnsDirective>
+            <Inject services={[Page, Sort, Edit, Toolbar, Filter, Aggregate, Resize, CommandColumn]} />
         </GridComponent>
     );
 }
